@@ -11,6 +11,14 @@ export default class View {
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
+  update(dataFC) {
+    if (!dataFC || (Array.isArray(dataFC) && dataFC.length === 0))
+      return this.renderError();
+    this._data = dataFC;
+    const newMarkup = this._generateMarkup();
+    console.log(newMarkup);
+  }
+
   _clear() {
     this._parentElement.innerHTML = "";
   }
