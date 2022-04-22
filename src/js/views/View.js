@@ -2,21 +2,53 @@ import icons from "../../img/icons.svg";
 
 export default class View {
   _data;
-  render(dataFC) {
+
+  render(dataFC, render = true) {
     if (!dataFC || (Array.isArray(dataFC) && dataFC.length === 0))
       return this.renderError();
     this._data = dataFC;
     const markup = this._generateMarkup();
+    if (!render) return markup;
+
     this._clear();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
   update(dataFC) {
-    if (!dataFC || (Array.isArray(dataFC) && dataFC.length === 0))
-      return this.renderError();
     this._data = dataFC;
     const newMarkup = this._generateMarkup();
-    console.log(newMarkup);
+    // console.log(newMarkup);
+
+    const newDom = document.createRange().createContextualFragment(newMarkup);
+    // console.log(newDom);
+
+    const newElements = Array.from(newDom.querySelectorAll("*"));
+    const curElements = Array.from(this._parentElement.querySelectorAll("*"));
+    // console.log(newElements, curElements);
+
+    // Update Changed Text
+
+    newElements.forEach((newEl, i) => {
+      let curEl = curElements[i];
+      // console.log(curEl, newEl.isEqualNode(curEl));
+      if (
+        !newEl.isEqualNode(curEl) &&
+        newEl.firstChild?.nodeValue.trim() !== ""
+      ) {
+        // console.log(newEl.firstChild.nodeValue.trim());
+        curEl.textContent = newEl.textContent;
+      }
+
+      // Update Changed Attributes
+
+      if (!newEl.isEqualNode(curEl)) {
+        // console.log(newEl.attributes);
+        // console.log(Array.from(newEl.attributes));
+        Array.from(newEl.attributes).forEach((attr) =>
+          curEl.setAttribute(attr.name, attr.value)
+        );
+      }
+    });
   }
 
   _clear() {
