@@ -1055,6 +1055,7 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 23vh;
+    padding: 0;
   }
 
   .header__logo {
