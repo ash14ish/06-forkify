@@ -1047,11 +1047,12 @@ body {
 @media (max-width: 750px) {
   body {
     width: 100vw;
+    margin: 0;
+    padding: 0;
   }
 
   .header {
     flex-direction: column;
-    /* flex-wrap: nowrap; */
     justify-content: center;
     height: 23vh;
   }
