@@ -1055,7 +1055,7 @@ body {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    height: 23vh;
+    height: 18vh;
     padding: 0;
   }
 
@@ -1082,10 +1082,10 @@ body {
     margin-right: 0;
   }
 
-  .message,
+  /* .message,
   .error,
   .recipe {
     display: none;
-  }
+  } */
 }
 /*# sourceMappingURL=main.css.map */
