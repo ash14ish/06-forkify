@@ -37,7 +37,7 @@ const loadRecipe = async function (id) {
 
     // console.log(state.bookmarks);
 
-    if (state.bookmarks.some((bookmark) => bookmark.id === id))
+    if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
 
@@ -54,7 +54,7 @@ const loadSearchResults = async function (query) {
     let data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
 
     state.search.results = data.data.recipes.map(
-      (rec) =>
+      rec =>
         (state.results = {
           id: rec.id,
           title: rec.title,
@@ -81,8 +81,12 @@ function getSearchResultsPage(page = state.search.page) {
 }
 
 function updateRecipe(newServings) {
-  state.recipe.ingredients.forEach((ing) => {
-    ing.quantity = (ing.quantity / state.recipe.servings) * newServings;
+  state.recipe.ingredients.forEach(ing => {
+    const quantity = (ing.quantity / state.recipe.servings) * newServings;
+    ing.quantity =
+      !Number.isNaN(quantity) && !Number.isInteger(quantity)
+        ? quantity.toFixed(1)
+        : quantity;
   });
   state.recipe.servings = newServings;
 }
@@ -104,7 +108,7 @@ const addBookmark = function (recipe) {
 
 const deleteBookmark = function (id) {
   //1) Delete Bookmark
-  const index = state.bookmarks.findIndex((curr) => curr.id === id);
+  const index = state.bookmarks.findIndex(curr => curr.id === id);
   state.bookmarks.splice(index, 1);
 
   // 2) Bookmark fill add
@@ -130,10 +134,10 @@ const uploadRecipe = async function (newRecipe) {
   try {
     // console.log(Object.entries(newRecipe));
     const ingredients = Object.entries(newRecipe)
-      .filter((el) => el[0].startsWith("ingredient-") && el[1] !== "")
-      .map((el) => {
+      .filter(el => el[0].startsWith("ingredient-") && el[1] !== "")
+      .map(el => {
         // const ingArr = el[1].replaceAll(" ", "").split(",");
-        const ingArr = el[1].split(",").map((curr) => curr.trim());
+        const ingArr = el[1].split(",").map(curr => curr.trim());
         // console.log(ingArr);
         if (ingArr.length !== 3)
           throw new Error(
