@@ -1050,10 +1050,26 @@ body {
   }
 
   .header {
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
     align-items: center;
-    align-content: center;
+  }
+
+  .header__logo {
+    order: 0;
+    align-self: flex-start;
+    height: 4rem;
+    margin: 0.4rem;
+  }
+
+  .search {
+    align-self: flex-end;
+    order: 1;
+  }
+
+  .nav {
+    align-self: flex-end;
+    order: 2;
   }
 }
 /*# sourceMappingURL=main.css.map */
