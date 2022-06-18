@@ -1052,24 +1052,37 @@ body {
   .header {
     flex-direction: column;
     /* flex-wrap: nowrap; */
-    align-items: center;
+    justify-content: center;
+    height: 23vh;
   }
 
   .header__logo {
-    order: 0;
-    align-self: flex-start;
-    height: 4rem;
-    margin: 0.4rem;
+    align-self: center;
+    margin: 1rem;
+    margin-top: 0;
   }
 
   .search {
-    align-self: flex-end;
-    order: 1;
+    align-self: end;
+    padding-left: 1.2rem;
+    height: 3.8rem;
+    margin: 0;
+  }
+
+  .search__btn {
+    height: 3.5rem;
+    padding: 2rem;
   }
 
   .nav {
-    align-self: flex-end;
-    order: 2;
+    align-self: center;
+    margin-top: 2.5rem;
+  }
+
+  .message,
+  .error,
+  .recipe {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
