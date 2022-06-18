@@ -1077,11 +1077,6 @@ body {
     margin: 1.5rem 0 0.5rem auto;
   }
 
-  .message,
-  .error {
-    margin-top: 3vh;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
