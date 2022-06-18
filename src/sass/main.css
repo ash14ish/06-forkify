@@ -1053,19 +1053,18 @@ body {
 
   .header {
     flex-direction: column;
-    justify-content: center;
+    align-content: center;
+    align-items: center;
     height: 23vh;
     padding: 0;
   }
 
   .header__logo {
-    align-self: center;
     margin: 1rem;
     margin-top: 0;
   }
 
   .search {
-    align-self: end;
     padding-left: 1.2rem;
     height: 3.8rem;
     margin: 0;
