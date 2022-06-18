@@ -1051,18 +1051,16 @@ body {
   }
 
   .header__logo {
-    position: fixed;
-    top: 0;
     height: 3.8rem;
-    margin: 0.6rem auto;
+    margin: 1rem;
   }
 
   .nav {
-    margin: 10vh auto;
+    margin: auto 0;
   }
 
   .nav__list {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   /* .search__btn {
