@@ -1053,8 +1053,6 @@ body {
 
   .header {
     flex-direction: column;
-    /* align-content: center; */
-    /* align-items: center; */
     height: 18vh;
     padding: 0;
   }
@@ -1076,15 +1074,22 @@ body {
 
   .nav {
     align-self: end;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    margin-right: 0;
+    margin: 1.5rem 0 0.5rem auto;
   }
 
   .message,
-  .error,
+  .error {
+    margin-top: 3vh;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .recipe {
-    display: none;
+    grid-area: recipe;
   }
 }
+
 /*# sourceMappingURL=main.css.map */
