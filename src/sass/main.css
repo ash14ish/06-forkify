@@ -1045,9 +1045,9 @@ body {
 
   .header {
     flex-direction: column;
-    height: 16vh;
+    height: 14vh;
     padding: 0;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
   }
 
   .header__logo {
