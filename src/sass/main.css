@@ -1051,9 +1051,14 @@ body {
     padding: 0;
   }
 
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .header {
     flex-direction: column;
-    height: 18vh;
+    height: 22vh;
     padding: 0;
   }
 
@@ -1077,14 +1082,21 @@ body {
     margin: 1.5rem 0 0.5rem auto;
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
+  .message,
+  .error {
+    margin-top: 0;
+    order: 0;
   }
 
-  .recipe {
-    grid-area: recipe;
+  .search-results {
+    margin-top: 1rem;
+    order: 1;
+    padding: 0;
   }
+
+  /* .recipe {
+    order: 2;
+  } */
 }
 
 /*# sourceMappingURL=main.css.map */
