@@ -1052,6 +1052,8 @@ body {
   .header {
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    align-content: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
