@@ -1053,8 +1053,8 @@ body {
 
   .header {
     flex-direction: column;
-    align-content: center;
-    align-items: center;
+    /* align-content: center; */
+    /* align-items: center; */
     height: 18vh;
     padding: 0;
   }
