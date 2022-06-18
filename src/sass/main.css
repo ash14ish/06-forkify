@@ -1045,40 +1045,24 @@ body {
 
   .header {
     flex-direction: column;
-    height: 10vh;
+    height: 16vh;
     padding: 0;
+    margin-bottom: 2vh;
   }
 
   .header__logo {
+    position: fixed;
+    top: 0;
     height: 3.8rem;
-    margin: 1rem;
+    margin: 0.6rem auto;
   }
 
   .nav {
-    align-self: end;
-    margin: 1.5rem 0 0.5rem auto;
+    margin: 10vh auto;
   }
 
-  .message,
-  .error {
-    margin-top: 0;
-    order: 0;
-  }
-
-  .search-results {
-    margin-top: 1rem;
-    order: 2;
-    padding: 0;
-  }
-
-  .recipe {
-    order: 1;
-  }
-
-  .recipe__ingredient-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  .nav__list {
+    justify-content: space-between;
   }
 
   /* .search__btn {
@@ -1098,6 +1082,28 @@ body {
 
   .search__field::placeholder {
     color: #615551;
+  }
+
+  .message,
+  .error {
+    margin: auto;
+    order: 0;
+  }
+
+  .search-results {
+    margin-top: 1rem;
+    order: 2;
+    padding: 0;
+  }
+
+  .recipe {
+    order: 1;
+  }
+
+  .recipe__ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
