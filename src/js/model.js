@@ -74,8 +74,8 @@ const loadSearchResults = async function (query) {
 function getSearchResultsPage(page = state.search.page) {
   state.search.page = page;
 
-  const start = (page - 1) * 10; //start -> 0,10,20;
-  const end = page * 10; // end -> 9(10),19(20),29(30);
+  const start = (page - 1) * 6; //start -> 0,10,20;
+  const end = page * 6; // end -> 9(10),19(20),29(30);
 
   return state.search.results.slice(start, end);
 }
