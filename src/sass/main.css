@@ -1041,13 +1041,11 @@ body {
   .container {
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
   }
 
   .header {
     flex-direction: column;
-    height: 16vh;
+    height: 10vh;
     padding: 0;
   }
 
@@ -1089,7 +1087,7 @@ body {
   } */
 
   .search {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #f2efee;
     padding-left: 2rem;
