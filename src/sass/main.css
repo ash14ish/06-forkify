@@ -8,6 +8,7 @@
 *::after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -1096,7 +1097,14 @@ body {
   .recipe__ingredient-list {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: start;
+  }
+
+  .recipe__details {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 60%);
+    justify-content: space-between;
   }
 }
 
@@ -1109,6 +1117,11 @@ body {
     height: 5rem;
     padding: 2rem 1rem;
     width: 30vw;
+  }
+
+  .recipe__details {
+    grid-template-columns: repeat(2, 2%);
+    justify-items: space-between;
   }
 }
 
