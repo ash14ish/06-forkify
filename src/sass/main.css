@@ -490,7 +490,7 @@ body {
   padding: 1rem 0;
   position: absolute;
   right: -2.5rem;
-  z-index: 10;
+  z-index: 1000;
   width: 40rem;
   background-color: #fff;
   -webkit-box-shadow: 0 0.8rem 5rem 2rem rgba(97, 85, 81, 0.1);
@@ -499,6 +499,22 @@ body {
   /* opacity: 0; */
   -webkit-transition: all 0.5s 0.2s;
   transition: all 0.5s 0.2s;
+  margin: 1rem;
+  overflow-y: scroll;
+  overflow-x: none;
+  height: 75vh;
+}
+
+.overlay-bookmark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 100;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .bookmarks__list {
@@ -1048,13 +1064,6 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(30, 30, 30);
-}
-
-.bookmarks {
-  margin: 1rem;
-  overflow-y: scroll;
-  overflow-x: none;
-  height: 75vh;
 }
 
 @media (max-width: 810px) {

@@ -5,26 +5,38 @@ class BookmarksView extends View {
   _parentElement = document.querySelector(".bookmarks__list");
   _errorMessage = " No bookmarks yet. Find a nice recipe and bookmark it :)";
   _message = "";
+  _bookmarkOverlay = document.querySelector(".overlay-bookmark");
 
   constructor() {
     super();
-    this._toggleBookMarkTab();
+    this._addHandlerShowBookmarkTab();
+    this._addHandlerHideBookmarkTab();
   }
 
   addHandlerRender(handler) {
     window.addEventListener("load", handler);
   }
 
-  _toggleBookMarkTab() {
+  _toggleBookmarkTab() {
+    this._parentElement.closest(".bookmarks").classList.toggle("hidden");
+    this._bookmarkOverlay.classList.toggle("hidden");
+  }
+
+  _addHandlerShowBookmarkTab() {
     document
       .querySelector(".nav__btn--bookmarks")
-      .addEventListener("click", () => {
-        this._parentElement.closest(".bookmarks").classList.toggle("hidden");
-      });
+      .addEventListener("click", this._toggleBookmarkTab.bind(this));
+  }
 
-    this._parentElement.closest(".bookmarks").addEventListener("click", e => {
-      e.currentTarget.classList.add("hidden");
-    });
+  _addHandlerHideBookmarkTab() {
+    this._parentElement
+      .closest(".bookmarks")
+      .addEventListener("click", this._toggleBookmarkTab.bind(this));
+
+    this._bookmarkOverlay.addEventListener(
+      "click",
+      this._toggleBookmarkTab.bind(this)
+    );
   }
 
   _generateMarkup() {
