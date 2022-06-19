@@ -1113,7 +1113,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .error {
+  .error,
+  .spinner {
     grid-column-start: span 2;
   }
 }
