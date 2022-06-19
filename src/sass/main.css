@@ -1047,14 +1047,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f69f84;
+  background: rgb(30, 30, 30);
 }
 
 .bookmarks {
   margin: 1rem;
   overflow-y: scroll;
   overflow-x: none;
-  height: 90vh;
+  height: 75vh;
 }
 
 @media (max-width: 750px) {
@@ -1065,11 +1065,7 @@ body {
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #f69f84;
+    width: 6.5px;
   }
 
   .container {
@@ -1177,9 +1173,6 @@ body {
   .upload__heading {
     justify-self: center;
   }
-
-  /* .upload__btn {
-  } */
 }
 
 @media (max-width: 335px) {
@@ -1200,6 +1193,11 @@ body {
 
   .bookmarks {
     margin-right: 2rem;
+  }
+
+  .upload__column input {
+    padding: 0.76rem 0.5rem;
+    font-size: 1.3rem;
   }
 }
 
