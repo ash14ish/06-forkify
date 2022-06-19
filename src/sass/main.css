@@ -1047,12 +1047,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(30, 30, 30);
+  background: #f69f84;
 }
 
 .bookmarks {
+  margin: 1rem;
   overflow-y: scroll;
   overflow-x: none;
+  height: 90vh;
 }
 
 @media (max-width: 750px) {
@@ -1064,6 +1066,10 @@ body {
 
   ::-webkit-scrollbar {
     width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f69f84;
   }
 
   .container {
@@ -1158,7 +1164,7 @@ body {
     width: 85vw;
     overflow-y: scroll;
     overflow-x: none;
-    padding: 1.3rem;
+    padding: 3rem;
   }
 
   .upload {
@@ -1171,6 +1177,9 @@ body {
   .upload__heading {
     justify-self: center;
   }
+
+  /* .upload__btn {
+  } */
 }
 
 @media (max-width: 335px) {
