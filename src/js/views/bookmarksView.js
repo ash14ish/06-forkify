@@ -21,6 +21,10 @@ class BookmarksView extends View {
       .addEventListener("click", () => {
         this._parentElement.closest(".bookmarks").classList.toggle("hidden");
       });
+
+    this._parentElement.closest(".bookmarks").addEventListener("click", e => {
+      e.currentTarget.classList.add("hidden");
+    });
   }
 
   _generateMarkup() {
