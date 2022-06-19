@@ -140,6 +140,7 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
 };
+
 init();
 
 // console.log(document.querySelector("img").attributes); // -> to check the attributes' NamedNodeMap

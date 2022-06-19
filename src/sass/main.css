@@ -495,8 +495,8 @@ body {
   background-color: #fff;
   -webkit-box-shadow: 0 0.8rem 5rem 2rem rgba(97, 85, 81, 0.1);
   box-shadow: 0 0.8rem 5rem 2rem rgba(97, 85, 81, 0.1);
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden; */
+  /* opacity: 0; */
   -webkit-transition: all 0.5s 0.2s;
   transition: all 0.5s 0.2s;
 }
@@ -523,11 +523,11 @@ body {
   background-color: #f2efee;
 }
 
-.bookmarks:hover,
+/* .bookmarks:hover,
 .nav__btn--bookmarks:hover + .bookmarks {
   visibility: visible;
   opacity: 1;
-}
+} */
 
 .preview__link:link,
 .preview__link:visited {
