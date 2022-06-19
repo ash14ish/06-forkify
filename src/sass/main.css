@@ -1195,15 +1195,21 @@ body {
   }
 }
 
-@media (max-width: 335px) {
+@media (max-width: 380px) {
+  body {
+    width: 100%;
+  }
+
   .search {
-    margin: auto;
+    left: 10%;
+    width: 65%;
+    height: 4.4rem;
   }
 
   .search__btn {
-    height: 5rem;
+    height: 4.4rem;
     padding: 2rem 1rem;
-    width: 30vw;
+    width: 40%;
   }
 
   .recipe__details {
