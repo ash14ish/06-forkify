@@ -1057,6 +1057,12 @@ body {
   height: 75vh;
 }
 
+@media (max-width: 810px) {
+  .add-recipe-window {
+    width: 90rem;
+  }
+}
+
 @media (max-width: 750px) {
   body {
     width: 100vw;
@@ -1173,6 +1179,10 @@ body {
 
   .upload__heading {
     justify-self: center;
+  }
+
+  .nav__btn:hover {
+    background-color: #f9f5f3;
   }
 }
 
