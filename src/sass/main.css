@@ -482,9 +482,9 @@ body {
   outline: none;
 }
 
-/* .nav__btn:hover {
+.nav__btn:hover {
   background-color: #f2efee;
-} */
+}
 
 .bookmarks {
   padding: 1rem 0;
