@@ -1153,6 +1153,24 @@ body {
     max-height: 72vh;
     width: 70vw;
   }
+
+  .add-recipe-window {
+    width: 85vw;
+    overflow-y: scroll;
+    overflow-x: none;
+    padding: 1.3rem;
+  }
+
+  .upload {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    overflow-x: none;
+    height: 70vh;
+  }
+
+  .upload__heading {
+    justify-self: center;
+  }
 }
 
 @media (max-width: 335px) {
@@ -1169,6 +1187,10 @@ body {
   .recipe__details {
     grid-template-columns: repeat(2, 2%);
     justify-items: space-between;
+  }
+
+  .bookmarks {
+    margin-right: 2rem;
   }
 }
 
