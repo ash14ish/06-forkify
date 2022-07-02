@@ -6,6 +6,10 @@ _A website where you can search for various recipes, what ingredients you need, 
 
 [Search over 10,000+ recipes](https://forkifite.netlify.app/)
 
+## Getting Starte with Create React App
+
+`npm install`
+
 # Installation
 
 ## Available Scripts
