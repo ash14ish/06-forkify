@@ -10,7 +10,7 @@ _A website where you can search for various recipes, what ingredients you need, 
 
 In the project directory, you can run:
 
-<mark>### npm start</mark>
+### <mark> npm start</mark>
 
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
